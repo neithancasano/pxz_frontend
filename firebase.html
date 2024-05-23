@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Friends</title>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database-compat.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group input, .input-group button {
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .input-group input {
+            flex: 1;
+        }
+        .input-group button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .input-group button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px;
+            background-color: #fff;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+        }
+        ul li button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        ul li .edit {
+            background-color: #ffc107;
+            color: white;
+        }
+        ul li .edit:hover {
+            background-color: #e0a800;
+        }
+        ul li .delete {
+            background-color: #dc3545;
+            color: white;
+        }
+        ul li .delete:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Friends</h1>
+        <div class="input-group">
+            <input type="text" id="friendName" placeholder="Enter friend's name">
+            <button onclick="addFriend()">Add Friend</button>
+        </div>
+        <ul id="friendList"></ul>
+    </div>
+
+    <script>
+	// Firebase configuration
+	const firebaseConfig = {
+		apiKey: "AIzaSyClA4WKuvJTMLf0NrQu_G2LDKaI0TYvn6Q",
+		authDomain: "liquidbread-f16ec.firebaseapp.com",
+		databaseURL: "https://liquidbread-f16ec-default-rtdb.asia-southeast1.firebasedatabase.app",
+		projectId: "liquidbread-f16ec",
+		storageBucket: "liquidbread-f16ec.appspot.com",
+		messagingSenderId: "676072900800",
+		appId: "1:676072900800:web:6717d93df2722f55e4c525",
+		measurementId: "G-HWWTN3TRZN"
+	};
+
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	const database = firebase.database();
+
+	// Fetch and display friends
+	function fetchFriends() {
+		const friendList = document.getElementById('friendList');
+		friendList.innerHTML = '';
+		database.ref('friends').on('value', (snapshot) => {
+			friendList.innerHTML = ''; // Clear the list before updating
+			snapshot.forEach((childSnapshot) => {
+				const friend = childSnapshot.val();
+				const li = document.createElement('li');
+				li.innerHTML = `
+					<span>${friend.name}</span>
+					<button class="edit" onclick="editFriend('${childSnapshot.key}', '${friend.name}')">Edit</button>
+					<button class="delete" onclick="deleteFriend('${childSnapshot.key}')">Delete</button>
+				`;
+				friendList.appendChild(li);
+			});
+		});
+	}
+
+	// Add a new friend
+	function addFriend() {
+		const friendName = document.getElementById('friendName').value.trim();
+		if (friendName) {
+			const newFriendRef = database.ref('friends').push();
+			newFriendRef.set({ name: friendName });
+			document.getElementById('friendName').value = '';
+		}
+	}
+
+	// Edit a friend
+	function editFriend(key, currentName) {
+		const newName = prompt("Edit friend's name:", currentName);
+		if (newName && newName.trim() !== '') {
+			database.ref('friends/' + key).update({ name: newName.trim() })
+				.then(fetchFriends); // Fetch friends after update
+		}
+	}
+
+	// Delete a friend
+	function deleteFriend(key) {
+		if (confirm('Are you sure you want to delete this friend?')) {
+			database.ref('friends/' + key).remove()
+				.then(fetchFriends); // Fetch friends after delete
+		}
+	}
+
+	// Fetch friends on page load
+	window.onload = fetchFriends;
+
+    </script>
+</body>
+</html>
