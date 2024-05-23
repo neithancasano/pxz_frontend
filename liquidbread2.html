@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Bread</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('bread.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            position: relative;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 10em;
+            margin: 20px 0;
+            color: #b5651d;
+            margin-top: 3%;
+        }
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5em;
+            color: #d9534f;
+            margin: 10px 0;
+            margin-top: -2%;
+        }
+        .h2v2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5em;
+            color: #b5651d;
+            margin: 10px 0;
+            margin-top: 10%;
+        }
+        p.tagline {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5em;
+            color: #5a5a5a;
+        }
+        .logo {
+            width: 400px;
+            height: auto;
+            margin: 20px auto;
+            margin-top: -15%;
+        }
+        .cta {
+            margin: 20px 0;
+            margin-bottom: 0%;
+        }
+        .cta button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cta button:hover {
+            background-color: #c9302c;
+        }
+        .testimonials {
+            margin: 40px 0;
+        }
+        .testimonials h2 {
+            width: 100%;
+        }
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            box-sizing: border-box;
+        }
+        .testimonial img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .chart {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .chart img {
+            width: 300px;
+            height: auto;
+        }
+        .appointment iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        .trials {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .trial-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 90%;
+        }
+        .trial-card img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .trial-card p {
+            margin: 0;
+            text-align: left;
+        }
+        .chart-container {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .chart-container h3 {
+            margin-bottom: 10px;
+        }
+        .chart-container p {
+            margin-top: 10px;
+        }
+        canvas {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            .h2v2 {
+                font-size: 2.5em;
+            }
+            .logo {
+                width: 250px;
+                margin-top: -10%;
+            }
+            .testimonial, .trial-card {
+                width: 90%;
+            }
+            .chart img {
+                width: 100%;
+            }
+            .cta button {
+                width: 80%;
+                padding: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 3em;
+            }
+            h2 {
+                font-size: 1em;
+            }
+            .h2v2 {
+                font-size: 2em;
+            }
+            .logo {
+                width: 200px;
+                margin-top: -5%;
+            }
+            .testimonial, .trial-card {
+                width: 100%;
+            }
+            .cta button {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Liquid Bread</h1>
+        <img src="liquidbread.png" alt="Liquid Bread Logo" class="logo">
+        <h2>If you're near to be dead, and you need to be fed, Liquid Bread!</h2>
+        <p class="tagline">From the makers of Spaghetti Socks!</p>
+
+        <div class="cta">
+            <button onclick="window.open('https://m.me/pixelzero.solutions', '_blank')">Order Now on Messenger</button>
+        </div>
+
+        <div class="testimonials">
+            <h2 class="h2v2">Testimonials</h2>
+            <div class="testimonial">
+                <img src="t1.png" alt="Person 1">
+                <p><strong>John Doe</strong></p>
+                <p>"Liquid Bread changed my life! It's delicious and nutritious!"</p>
+            </div>
+            <div class="testimonial">
+                <img src="t2.png" alt="Person 2">
+                <p><strong>Jane Smith</strong></p>
+                <p>"I can't believe how good it tastes. My kids love it too!"</p>
+            </div>
+            <div class="testimonial">
+                <img src="t3.png" alt="Person 3">
+                <p><strong>Bob Johnson</strong></p>
+                <p>"A perfect meal replacement. Keeps me full and happy."</p>
+            </div>
+            <div class="testimonial">
+                <img src="t4.png" alt="Person 4">
+                <p><strong>Mary Williams</strong></p>
+                <p>"As a busy professional, Liquid Bread is a lifesaver."</p>
+            </div>
+            <div class="testimonial">
+                <img src="t5.png" alt="Person 5">
+                <p><strong>Michael Brown</strong></p>
+                <p>"Great taste and super convenient. Highly recommend!"</p>
+            </div>
+        </div>
+
+        <div class="trials">
+            <h2 class="h2v2">Medical Trials</h2>
+            <div class="trial-card">
+                <img src="t6.png" alt="Dr. Alice Green">
+                <div>
+                    <p><strong>Dr. Alice Green, PhD in Nutrition</strong></p>
+                    <p>"Our trials show that Liquid Bread users are 50% happier and have more energy."</p>
+                </div>
+            </div>
+            <div class="trial-card">
+                <img src="t7.png" alt="Dr. Robert White">
+                <div>
+                    <p><strong>Dr. Robert White, MD</strong></p>
+                    <p>"The perfect solution for meal replacement. Approved by 9 out of 10 doctors."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="charts">
+            <h2 class="h2v2">Scientific Data</h2>
+            <div class="chart-container">
+                <h3>Liquid Bread Users Are Happier</h3>
+                <canvas id="happinessChart"></canvas>
+                <p>Studies show that 70% of Liquid Bread users report increased happiness and overall life satisfaction. <br>This is attributed to the balanced nutritional profile and the convenience of having a meal in a bottle.</p>
+            </div>
+            <div class="chart-container">
+                <h3>Lower Risk of Becoming Elderly Convicts</h3>
+                <canvas id="convictChart"></canvas>
+                <p>Our research indicates that Liquid Bread consumers are 90% less likely to become elderly convicts. <br>This surprising correlation may be due to the sense of fulfillment and well-being provided by the product.</p>
+            </div>
+        </div>
+
+        <div class="appointment">
+            <h2 class="h2v2">Book an Appointment</h2>
+            <iframe src="https://calendly.com/jonathancasano"></iframe>
+        </div>
+    </div>
+	
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Happiness Chart
+        var ctx1 = document.getElementById('happinessChart').getContext('2d');
+        var happinessChart = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Before Liquid Bread', 'After Liquid Bread'],
+                datasets: [{
+                    label: 'Happiness Level',
+                    data: [50, 90],
+                    backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)'],
+                    borderColor: ['rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Elderly Convicts Chart
+        var ctx2 = document.getElementById('convictChart').getContext('2d');
+        var convictChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Non-Users', 'Liquid Bread Users'],
+                datasets: [{
+                    label: 'Likelihood of Becoming Elderly Convicts',
+                    data: [90, 10],
+                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

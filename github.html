@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy to GitHub Pages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+            margin-top: 30px;
+        }
+        h2 {
+            font-weight: 700;
+            color: #444;
+            margin-top: 30px;
+        }
+        p {
+            font-weight: 300;
+            color: #666;
+            line-height: 1.6;
+        }
+        .steps {
+            list-style: none;
+            padding: 0;
+        }
+        .steps li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .steps li::before {
+            content: counter(step);
+            counter-increment: step;
+            width: 20px;
+            height: 20px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Deploy to GitHub Pages</h1>
+        <p>Follow these steps to deploy your HTML files to GitHub Pages:</p>
+        <ol class="steps">
+            <li>
+                <h2>Step 1: Create a GitHub Repository</h2>
+                <p>Go to <a href="https://github.com" target="_blank">GitHub</a> and create a new repository. Name it appropriately for your project.</p>
+            </li>
+            <li>
+                <h2>Step 2: Upload Your Files</h2>
+                <p>Upload your HTML, CSS, and JavaScript files to the repository. You can do this by clicking on "Add file" and then "Upload files".</p>
+            </li>
+            <li>
+                <h2>Step 3: Configure GitHub Pages</h2>
+                <p>Go to the repository settings, scroll down to the "GitHub Pages" section, and select the branch you want to use (usually `main` or `master`). Then select the folder (usually `/root`) where your HTML files are located.</p>
+            </li>
+            <li>
+                <h2>Step 4: Save and Deploy</h2>
+                <p>Click "Save" and wait for GitHub to deploy your site. Once it's done, you will see a URL where your site is hosted. Click on the URL to visit your site.</p>
+            </li>
+        </ol>
+        <p>If you need further assistance, refer to the official <a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages documentation</a>.</p>
+        <p><a href="index.html" class="button">Back to Home</a></p>
+    </div>
+</body>
+</html>

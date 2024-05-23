@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill the Button's Front-End Cheatsheet</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        /* Example 2: Red button */
+        .red {
+            background-color: red;
+            color: white;
+        }
+
+        /* Example 3: Aligned left */
+        .left {
+            display: block;
+            text-align: left;
+        }
+
+        /* Example 4: Centered */
+        .center {
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Example 5: Increased font size */
+        .large-text {
+            font-size: 20px;
+        }
+
+        /* Example 6: Bold text */
+        .bold {
+            font-weight: bold;
+        }
+
+        /* Example 7: Add margin */
+        .margin {
+            margin: 20px;
+        }
+
+        /* Example 8: Add padding */
+        .padding {
+            padding: 20px;
+        }
+
+        /* Example 9: Rounded corners */
+        .rounded {
+            border-radius: 15px;
+        }
+
+        /* Example 10: Shadow effect */
+        .shadow {
+            box-shadow: 2px 2px 5px grey;
+        }
+
+        /* Example 11: Hover effect */
+        .hover:hover {
+            background-color: blue;
+        }
+
+        /* Example 12: Font change */
+        .font {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Example 13: Border */
+        .border {
+            border: 2px solid black;
+        }
+
+        /* Example 14: Background image */
+        .bg-image {
+            background-image: url('https://via.placeholder.com/150');
+            background-size: cover;
+            color: white;
+        }
+
+        /* Example 15: Gradient background */
+        .gradient {
+            background: linear-gradient(to right, red, yellow);
+        }
+
+        /* Example 16: Transparent button */
+        .transparent {
+            background-color: transparent;
+        }
+
+        /* Example 17: Uppercase text */
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        /* Example 18: Letter spacing */
+        .letter-spacing {
+            letter-spacing: 2px;
+        }
+
+        /* Example 19: Text color change */
+        .text-color {
+            color: blue;
+        }
+
+        /* Example 20: Button width adjustment */
+        .width {
+            width: 200px;
+        }
+
+        /* Example 21: Button height adjustment */
+        .height {
+            height: 50px;
+        }
+
+        /* Example 22: Dashed border */
+        .dashed-border {
+            border: 2px dashed black;
+        }
+
+        /* Example 23: Dotted border */
+        .dotted-border {
+            border: 2px dotted black;
+        }
+
+        /* Example 24: Double border */
+        .double-border {
+            border: 3px double black;
+        }
+
+        /* Example 25: Button with icon */
+        .icon::before {
+            content: '🔔';
+            margin-right: 5px;
+        }
+
+        /* Additional styles for new examples */
+
+        /* Example 26: Outlined button */
+        .outlined {
+            border: 2px solid black;
+            background-color: transparent;
+        }
+
+        /* Example 27: Button with linear gradient */
+        .linear-gradient {
+            background: linear-gradient(to right, red, blue);
+            color: white;
+        }
+
+        /* Example 28: Button with radial gradient */
+        .radial-gradient {
+            background: radial-gradient(circle, red, blue);
+            color: white;
+        }
+
+        /* Example 29: Button with inset shadow */
+        .inset-shadow {
+            box-shadow: inset 2px 2px 5px grey;
+        }
+
+        /* Example 30: Button with text decoration */
+        .text-decoration {
+            text-decoration: underline;
+        }
+
+        /* Example 31: Button with background clip */
+        .bg-clip {
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Example 32: Button with opacity */
+        .opacity {
+            opacity: 0.5;
+        }
+
+        /* Example 33: Button with vertical align */
+        .vertical-align {
+            vertical-align: middle;
+        }
+
+        /* Example 34: Button with transform (rotate) */
+        .transform-rotate {
+            transform: rotate(15deg);
+        }
+
+        /* Example 35: Button with transform (scale) */
+        .transform-scale {
+            transform: scale(1.5);
+        }
+
+        /* Example 36: Button with transform (skew) */
+        .transform-skew {
+            transform: skewX(20deg);
+        }
+
+        /* Example 37: Button with background blend mode */
+        .bg-blend {
+            background-color: red;
+            background-blend-mode: multiply;
+        }
+
+        /* Example 38: Button with text shadow */
+        .text-shadow {
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        /* Example 39: Button with overflow hidden */
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        /* Example 40: Button with word wrap */
+        .word-wrap {
+            word-wrap: break-word;
+        }
+
+        /* Example 41: Button with writing mode */
+        .writing-mode {
+            writing-mode: vertical-rl;
+        }
+
+        /* Example 42: Button with unicode bidi */
+        .unicode-bidi {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+
+        /* Example 43: Button with box sizing */
+        .box-sizing {
+            box-sizing: border-box;
+        }
+
+        /* Example 44: Button with flexbox */
+        .flexbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Example 45: Button with grid layout */
+        .grid {
+            display: grid;
+            place-items: center;
+        }
+
+        /* Example 46: Button with custom cursor */
+        .custom-cursor {
+            cursor: url('https://via.placeholder.com/32'), auto;
+        }
+
+        /* Example 47: Button with outline */
+        .outline {
+            outline: 2px solid blue;
+        }
+
+        /* Example 48: Button with perspective */
+        .perspective {
+            perspective: 500px;
+        }
+
+        /* Example 49: Button with user select */
+        .user-select {
+            user-select: none;
+        }
+
+        /* Example 50: Button with object fit */
+        .object-fit {
+            object-fit: cover;
+        }
+
+        /* Example 51: Button with background gradient */
+        .bg-gradient {
+            background: linear-gradient(to bottom right, red, yellow, blue);
+        }
+
+        /* Example 52: Button with multiple backgrounds */
+        .multi-bg {
+            background: url('https://via.placeholder.com/50'), linear-gradient(to right, red, blue);
+            background-blend-mode: overlay;
+        }
+
+        /* Example 53: Button with CSS variables */
+        :root {
+            --button-color: orange;
+        }
+        .css-variables {
+            background-color: var(--button-color);
+        }
+
+        /* Example 54: Button with CSS grid */
+        .css-grid {
+            display: grid;
+            place-items: center;
+        }
+
+        /* Example 55: Button with CSS flexbox */
+        .css-flexbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Example 56: Button with text wrapping */
+        .text-wrap {
+            white-space: normal;
+        }
+
+        /* Example 57: Button with vertical text */
+        .vertical-text {
+            writing-mode: vertical-rl;
+        }
+
+        /* Example 58: Button with CSS transitions */
+        .css-transition {
+            transition: background-color 0.5s, transform 0.5s;
+        }
+
+        /* Example 59: Button with CSS animations */
+        @keyframes color-change {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+            }
+        }
+        .css-animation {
+            animation: color-change 2s infinite alternate;
+        }
+
+        /* Example 60: Button with hover transition */
+        .hover-transition:hover {
+            background-color: blue;
+            transform: scale(1.1);
+        }
+
+        /* Example 61: Button with focus state */
+        .focus:focus {
+            background-color: yellow;
+        }
+
+        /* Example 62: Button with active state */
+        .active:active {
+            background-color: green;
+        }
+
+        /* Example 63: Button with disabled state */
+        .disabled {
+            background-color: grey;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* Example 64: Button with different fonts on hover */
+        .hover-font:hover {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Example 65: Button with background color change on focus */
+        .focus-bg:focus {
+            background-color: lightblue;
+        }
+
+        /* Example 66: Button with box model properties */
+        .box-model {
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        /* Example 67: Button with content before and after */
+        .before::before {
+            content: 'Start ';
+        }
+        .after::after {
+            content: ' End';
+        }
+
+        /* Example 68: Button with content inside */
+        .inside {
+            content: 'Inside';
+        }
+
+        /* Example 69: Button with word spacing */
+        .word-spacing {
+            word-spacing: 10px;
+        }
+
+        /* Example 70: Button with line height */
+        .line-height {
+            line-height: 2;
+        }
+
+        /* Example 71: Button with clip path */
+        .clip-path {
+            clip-path: circle(50%);
+        }
+
+        /* Example 72: Button with filter effects */
+        .filter {
+            filter: blur(2px);
+        }
+
+        /* Example 73: Button with CSS masks */
+        .mask {
+            mask-image: url('https://via.placeholder.com/50');
+        }
+
+        /* Example 74: Button with perspective transform */
+        .perspective-transform {
+            transform: perspective(500px) rotateY(45deg);
+        }
+
+        /* Example 75: Button with CSS columns */
+        .columns {
+            column-count: 2;
+        }
+
+		body {
+			font-family: 'Arial', sans-serif;
+			background: #f5f5f5;
+			margin: 0;
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+
+		.header, .footer {
+			position: fixed;
+			width: 100%;
+			background: rgba(255, 255, 255, 0.9);
+			backdrop-filter: blur(10px);
+			text-align: center;
+			padding: 15px 0;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		.header {
+			top: 0;
+		}
+
+		.footer {
+			bottom: 0;
+		}
+
+		.container {
+			padding: 20px;
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+
+		h1 {
+			font-size: 2em;
+			margin: 0;
+		}
+
+		.example {
+			background: rgba(255, 255, 255, 0.8);
+			padding: 20px;
+			margin: 20px 0;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		.example h2 {
+			font-size: 1.2em;
+			margin-bottom: 10px;
+		}
+
+		.button {
+			padding: 10px 20px;
+			border: none;
+			cursor: pointer;
+			margin: 10px 0;
+		}
+    </style>
+</head>
+<body>
+    <div class="header">
+		<h1>Bill the Button's Beginner Front-End Cheatsheet - Part 1 (HTML & CSS)</h1>
+	</div>
+
+
+    <div class="example">
+        <h2>Bill the button</h2>
+        <button class="button">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button is color red</h2>
+        <button class="button red">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button is aligned left</h2>
+        <button class="button left">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button is centered</h2>
+        <button class="button center">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has increased font size</h2>
+        <button class="button large-text">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has bold text</h2>
+        <button class="button bold">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has margin</h2>
+        <button class="button margin">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has padding</h2>
+        <button class="button padding">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has rounded corners</h2>
+        <button class="button rounded">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a shadow effect</h2>
+        <button class="button shadow">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button changes color on hover</h2>
+        <button class="button hover">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a different font</h2>
+        <button class="button font">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a border</h2>
+        <button class="button border">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a background image</h2>
+        <button class="button bg-image">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a gradient background</h2>
+        <button class="button gradient">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button is transparent</h2>
+        <button class="button transparent">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has uppercase text</h2>
+        <button class="button uppercase">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has increased letter spacing</h2>
+        <button class="button letter-spacing">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has blue text</h2>
+        <button class="button text-color">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has increased width</h2>
+        <button class="button width">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has increased height</h2>
+        <button class="button height">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a dashed border</h2>
+        <button class="button dashed-border">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a dotted border</h2>
+        <button class="button dotted-border">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a double border</h2>
+        <button class="button double-border">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has an icon</h2>
+        <button class="button icon">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button is outlined</h2>
+        <button class="button outlined">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a linear gradient</h2>
+        <button class="button linear-gradient">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a radial gradient</h2>
+        <button class="button radial-gradient">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has an inset shadow</h2>
+        <button class="button inset-shadow">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has text decoration</h2>
+        <button class="button text-decoration">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has background clip</h2>
+        <button class="button bg-clip">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has opacity</h2>
+        <button class="button opacity">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has vertical align</h2>
+        <button class="button vertical-align">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button is rotated</h2>
+        <button class="button transform-rotate">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button is scaled</h2>
+        <button class="button transform-scale">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button is skewed</h2>
+        <button class="button transform-skew">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has background blend mode</h2>
+        <button class="button bg-blend">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a text shadow</h2>
+        <button class="button text-shadow">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has overflow hidden</h2>
+        <button class="button overflow-hidden">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has word wrap</h2>
+        <button class="button word-wrap">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has vertical text</h2>
+        <button class="button writing-mode">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has unicode bidi</h2>
+        <button class="button unicode-bidi">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has box sizing</h2>
+        <button class="button box-sizing">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button uses flexbox</h2>
+        <button class="button flexbox">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button uses grid layout</h2>
+        <button class="button grid">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a custom cursor</h2>
+        <button class="button custom-cursor">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has an outline</h2>
+        <button class="button outline">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has perspective</h2>
+        <button class="button perspective">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button cannot be selected</h2>
+        <button class="button user-select">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has object fit</h2>
+        <button class="button object-fit">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has a background gradient</h2>
+        <button class="button bg-gradient">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has multiple backgrounds</h2>
+        <button class="button multi-bg">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button uses CSS variables</h2>
+        <button class="button css-variables">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button uses CSS grid</h2>
+        <button class="button css-grid">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button uses CSS flexbox</h2>
+        <button class="button css-flexbox">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has text wrapping</h2>
+        <button class="button text-wrap">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has vertical text</h2>
+        <button class="button vertical-text">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has CSS transitions</h2>
+        <button class="button css-transition">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has CSS animations</h2>
+        <button class="button css-animation">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has hover transition</h2>
+        <button class="button hover-transition">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button changes color on focus</h2>
+        <button class="button focus">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button changes color on active</h2>
+        <button class="button active">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button is disabled</h2>
+        <button class="button disabled">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button changes font on hover</h2>
+        <button class="button hover-font">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button changes background on focus</h2>
+        <button class="button focus-bg">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has box model properties</h2>
+        <button class="button box-model">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has content before and after</h2>
+        <button class="button before after">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has content inside</h2>
+        <button class="button inside">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has word spacing</h2>
+        <button class="button word-spacing">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has line height</h2>
+        <button class="button line-height">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has clip path</h2>
+        <button class="button clip-path">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has filter effects</h2>
+        <button class="button filter">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has CSS masks</h2>
+        <button class="button mask">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has perspective transform</h2>
+        <button class="button perspective-transform">Bill</button>
+    </div>
+
+    <div class="example">
+        <h2>Bill the button has CSS columns</h2>
+        <button class="button columns">Bill</button>
+    </div>
+
+
+	
+	<div class="footer">
+		<p>Prepared with love by Jen and Neithan of Pixelzero Digital Solutions | pixelzero.solutions © 2024 PIXELZERO SOLUTIONS INC.</p>
+	</div>
+
+</body>
+</html>

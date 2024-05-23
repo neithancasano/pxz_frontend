@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy to TinyHost</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-weight: 700;
+            color: #333;
+            text-align: center;
+            margin-top: 30px;
+        }
+        h2 {
+            font-weight: 700;
+            color: #444;
+            margin-top: 30px;
+        }
+        p {
+            font-weight: 300;
+            color: #666;
+            line-height: 1.6;
+        }
+        .steps {
+            list-style: none;
+            padding: 0;
+        }
+        .steps li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .steps li::before {
+            content: counter(step);
+            counter-increment: step;
+            width: 20px;
+            height: 20px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Deploy to TinyHost</h1>
+        <p>Follow these steps to deploy your HTML files to TinyHost:</p>
+        <ol class="steps">
+            <li>
+                <h2>Step 1: Create a Zip File</h2>
+                <p>Compress all your project files (HTML, CSS, JavaScript) into a single .zip file. Ensure that your main HTML file is named `index.html`.</p>
+            </li>
+            <li>
+                <h2>Step 2: Go to TinyHost</h2>
+                <p>Visit <a href="https://tiiny.host" target="_blank">TinyHost</a> and sign in or create a new account.</p>
+            </li>
+            <li>
+                <h2>Step 3: Upload Your Zip File</h2>
+                <p>Click on "New Website", then "Upload Zip File". Choose the .zip file you created and upload it.</p>
+            </li>
+            <li>
+                <h2>Step 4: Deploy Your Site</h2>
+                <p>Follow the prompts to complete the deployment. Once your site is deployed, TinyHost will provide you with a URL to access your site.</p>
+            </li>
+        </ol>
+        <p>If you need further assistance, refer to the official <a href="https://tiiny.host/docs" target="_blank">TinyHost documentation</a>.</p>
+        <p><a href="index.html" class="button">Back to Home<
