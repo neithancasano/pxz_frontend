@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill the Button's Front-End Cheatsheet - JavaScript</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bill the Button's Front-End Cheatsheet - JavaScript</h1>
+
+    <!-- Example 1: Change color on click -->
+    <h2>Bill the button changes color on click</h2>
+    <button class="button" onclick="this.style.backgroundColor = 'blue'">Bill</button>
+
+    <!-- Example 2: Toggle visibility on click -->
+    <h2>Bill the button toggles visibility on click</h2>
+    <button class="button" onclick="this.style.display = this.style.display === 'none' ? 'block' : 'none'">Bill</button>
+
+    <!-- Example 3: Show alert on click -->
+    <h2>Bill the button shows an alert on click</h2>
+    <button class="button" onclick="alert('Hello from Bill!')">Bill</button>
+
+    <!-- Example 4: Log message on click -->
+    <h2>Bill the button logs a message on click</h2>
+    <button class="button" onclick="console.log('Button clicked!')">Bill</button>
+
+    <!-- Example 5: Change text on click -->
+    <h2>Bill the button changes text on click</h2>
+    <button class="button" onclick="this.innerText = 'Clicked!'">Bill</button>
+
+    <!-- Example 6: Animate width on click -->
+    <h2>Bill the button animates width on click</h2>
+    <button class="button" onclick="this.style.width = '200px'; this.style.transition = 'width 0.5s'">Bill</button>
+
+    <!-- Example 7: Animate height on click -->
+    <h2>Bill the button animates height on click</h2>
+    <button class="button" onclick="this.style.height = '50px'; this.style.transition = 'height 0.5s'">Bill</button>
+
+    <!-- Example 8: Animate opacity on click -->
+    <h2>Bill the button animates opacity on click</h2>
+    <button class="button" onclick="this.style.opacity = '0.5'; this.style.transition = 'opacity 0.5s'">Bill</button>
+
+    <!-- Example 9: Add class on click -->
+    <h2>Bill the button adds a class on click</h2>
+    <button class="button" onclick="this.classList.add('new-class')">Bill</button>
+    <style>
+        .new-class {
+            background-color: green;
+        }
+    </style>
+
+    <!-- Example 10: Remove class on click -->
+    <h2>Bill the button removes a class on click</h2>
+    <button class="button new-class" onclick="this.classList.remove('new-class')">Bill</button>
+
+    <!-- Example 11: Toggle class on click -->
+    <h2>Bill the button toggles a class on click</h2>
+    <button class="button" onclick="this.classList.toggle('new-class')">Bill</button>
+
+    <!-- Example 12: Add class on hover -->
+    <h2>Bill the button adds a class on hover</h2>
+    <button class="button" onmouseover="this.classList.add('hover-class')" onmouseout="this.classList.remove('hover-class')">Bill</button>
+    <style>
+        .hover-class {
+            background-color: purple;
+        }
+    </style>
+
+    <!-- Example 13: Remove class on hover -->
+    <h2>Bill the button removes a class on hover</h2>
+    <button class="button hover-class" onmouseover="this.classList.remove('hover-class')" onmouseout="this.classList.add('hover-class')">Bill</button>
+
+    <!-- Example 14: Toggle class on hover -->
+    <h2>Bill the button toggles a class on hover</h2>
+    <button class="button" onmouseover="this.classList.toggle('hover-class')" onmouseout="this.classList.toggle('hover-class')">Bill</button>
+
+    <!-- Example 15: Change background color on hover -->
+    <h2>Bill the button changes background color on hover</h2>
+    <button class="button" onmouseover="this.style.backgroundColor = 'yellow'" onmouseout="this.style.backgroundColor = ''">Bill</button>
+
+    <!-- Example 16: Change text color on hover -->
+    <h2>Bill the button changes text color on hover</h2>
+    <button class="button" onmouseover="this.style.color = 'red'" onmouseout="this.style.color = ''">Bill</button>
+
+    <!-- Example 17: Change font size on hover -->
+    <h2>Bill the button changes font size on hover</h2>
+    <button class="button" onmouseover="this.style.fontSize = '24px'" onmouseout="this.style.fontSize = ''">Bill</button>
+
+    <!-- Example 18: Add shadow on hover -->
+    <h2>Bill the button adds shadow on hover</h2>
+    <button class="button" onmouseover="this.style.boxShadow = '5px 5px 10px grey'" onmouseout="this.style.boxShadow = ''">Bill</button>
+
+    <!-- Example 19: Remove shadow on hover -->
+    <h2>Bill the button removes shadow on hover</h2>
+    <button class="button" onmouseover="this.style.boxShadow = ''" onmouseout="this.style.boxShadow = '5px 5px 10px grey'">Bill</button>
+
+    <!-- Example 20: Toggle shadow on hover -->
+    <h2>Bill the button toggles shadow on hover</h2>
+    <button class="button" onmouseover="this.style.boxShadow = this.style.boxShadow === '5px 5px 10px grey' ? '' : '5px 5px 10px grey'">Bill</button>
+
+    <!-- Example 21: Rotate on hover -->
+    <h2>Bill the button rotates on hover</h2>
+    <button class="button" onmouseover="this.style.transform = 'rotate(45deg)'" onmouseout="this.style.transform = ''">Bill</button>
+
+    <!-- Example 22: Scale on hover -->
+    <h2>Bill the button scales on hover</h2>
+    <button class="button" onmouseover="this.style.transform = 'scale(1.5)'" onmouseout="this.style.transform = ''">Bill</button>
+
+    <!-- Example 23: Skew on hover -->
+    <h2>Bill the button skews on hover</h2>
+    <button class="button" onmouseover="this.style.transform = 'skewX(20deg)'" onmouseout="this.style.transform = ''">Bill</button>
+
+    <!-- Example 24: Change border color on hover -->
+    <h2>Bill the button changes border color on hover</h2>
+    <button class="button" onmouseover="this.style.borderColor = 'red'" onmouseout="this.style.borderColor = ''">Bill</button>
+
+    <!-- Example 25: Change border style on hover -->
+    <h2>Bill the button changes border style on hover</h2>
+    <button class="button" onmouseover="this.style.borderStyle = 'dotted'" onmouseout="this.style.borderStyle = ''">Bill</button>
+
+    <!-- Example 26: Change border width on hover -->
+    <h2>Bill the button changes border width on hover</h2>
+    <button class="button" onmouseover="this.style.borderWidth = '5px'" onmouseout="this.style.borderWidth = ''">Bill</button>
+
+    <!-- Example 27: Change cursor on hover -->
+    <h2>Bill the button changes cursor on hover</h2>
+    <button class="button" onmouseover="this.style.cursor = 'pointer'" onmouseout="this.style.cursor = ''">Bill</button>
+
+    <!-- Example 28: Change text on hover -->
+    <h2>Bill the button changes text on hover</h2>
+    <button class="button" onmouseover="this.innerText = 'Hovered!'" onmouseout="this.innerText = 'Bill'">Bill</button>
+
+    <!-- Example 29: Log message on hover -->
+    <h2>Bill the button logs a message on hover</h2>
+    <button class="button" onmouseover="console.log('Button hovered!')">Bill</button>
+
+    <!-- Example 30: Show tooltip on hover -->
+    <h2>Bill the button shows a tooltip on hover</h2>
+    <button class="button" title="Tooltip text">Bill</button>
+
+    <!-- Example 31: Hide tooltip on hover -->
+    <h2>Bill the button hides tooltip on hover</h2>
+    <button class="button" title="Tooltip text" onmouseover="this.title = ''" onmouseout="this.title = 'Tooltip text'">Bill</button>
+
+    <!-- Example 32: Disable button on click -->
+    <h2>Bill the button disables itself on click</h2>
+    <button class="button" onclick="this.disabled = true">Bill</button>
+
+    <!-- Example 33: Enable button on click -->
+    <h2>Bill the button enables another button on click</h2>
+    <button class="button" onclick="document.getElementById('button-to-enable').disabled = false">Enable Bill</button>
+    <button id="button-to-enable" class="button" disabled>Bill</button>
+
+    <!-- Example 34: Submit form on click -->
+    <h2>Bill the button submits a form on click</h2>
+    <form id="myForm">
+        <button class="button" type="submit">Submit Bill</button>
+    </form>
+
+    <!-- Example 35: Prevent default on click -->
+    <h2>Bill the button prevents default action on click</h2>
+    <a href="https://example.com" class="button" onclick="event.preventDefault()">Bill</a>
+
+    <!-- Example 36: Change text alignment on click -->
+    <h2>Bill the button changes text alignment on click</h2>
+    <button class="button" onclick="this.style.textAlign = 'right'">Bill</button>
+
+    <!-- Example 37: Change font on click -->
+    <h2>Bill the button changes font on click</h2>
+    <button class="button" onclick="this.style.fontFamily = 'Courier New'">Bill</button>
+
+    <!-- Example 38: Toggle text decoration on click -->
+    <h2>Bill the button toggles text decoration on click</h2>
+    <button class="button" onclick="this.style.textDecoration = this.style.textDecoration === 'underline' ? 'none' : 'underline'">Bill</button>
+
+    <!-- Example 39: Toggle background image on click -->
+    <h2>Bill the button toggles background image on click</h2>
+    <button class="button" onclick="this.style.backgroundImage = this.style.backgroundImage === '' ? 'url(https://via.placeholder.com/50)' : ''">Bill</button>
+
+    <!-- Example 40: Toggle gradient background on click -->
+    <h2>Bill the button toggles gradient background on click</h2>
+    <button class="button" onclick="this.style.background = this.style.background === '' ? 'linear-gradient(to right, red, yellow)' : ''">Bill</button>
+
+    <!-- Example 41: Toggle opacity on click -->
+    <h2>Bill the button toggles opacity on click</h2>
+    <button class="button" onclick="this.style.opacity = this.style.opacity === '1' ? '0.5' : '1'">Bill</button>
+
+    <!-- Example 42: Toggle visibility on click -->
+    <h2>Bill the button toggles visibility on click</h2>
+    <button class="button" onclick="this.style.visibility = this.style.visibility === 'visible' ? 'hidden' : 'visible'">Bill</button>
+
+    <!-- Example 43: Toggle display on click -->
+    <h2>Bill the button toggles display on click</h2>
+    <button class="button" onclick="this.style.display = this.style.display === 'block' ? 'none' : 'block'">Bill</button>
+
+    <!-- Example 44: Slide up on click -->
+    <h2>Bill the button slides up on click</h2>
+    <button class="button" onclick="this.style.transition = 'height 0.5s'; this.style.height = '0'">Bill</button>
+
+    <!-- Example 45: Slide down on click -->
+    <h2>Bill the button slides down on click</h2>
+    <button class="button" onclick="this.style.transition = 'height 0.5s'; this.style.height = '50px'">Bill</button>
+
+    <!-- Example 46: Fade in on click -->
+    <h2>Bill the button fades in on click</h2>
+    <button class="button" onclick="this.style.transition = 'opacity 0.5s'; this.style.opacity = '1'">Bill</button>
+
+    <!-- Example 47: Fade out on click -->
+    <h2>Bill the button fades out on click</h2>
+    <button class="button" onclick="this.style.transition = 'opacity 0.5s'; this.style.opacity = '0'">Bill</button>
+
+    <!-- Example 48: Expand on click -->
+    <h2>Bill the button expands on click</h2>
+    <button class="button" onclick="this.style.transition = 'all 0.5s'; this.style.width = '200px'; this.style.height = '50px'">Bill</button>
+
+    <!-- Example 49: Collapse on click -->
+    <h2>Bill the button collapses on click</h2>
+    <button class="button" onclick="this.style.transition = 'all 0.5s'; this.style.width = '100px'; this.style.height = '30px'">Bill</button>
+
+    <!-- Example 50: Trigger animation on click -->
+    <h2>Bill the button triggers an animation on click</h2>
+    <button class="button" onclick="this.style.animation = 'spin 2s linear infinite'">Bill</button>
+    <style>
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Additional 25 examples -->
+
+    <!-- Example 51: Change text on double-click -->
+    <h2>Bill the button changes text on double-click</h2>
+    <button class="button" ondblclick="this.innerText = 'Double Clicked!'">Bill</button>
+
+    <!-- Example 52: Change background color on double-click -->
+    <h2>Bill the button changes background color on double-click</h2>
+    <button class="button" ondblclick="this.style.backgroundColor = 'purple'">Bill</button>
+
+    <!-- Example 53: Toggle text on click -->
+    <h2>Bill the button toggles text on click</h2>
+    <button class="button" onclick="this.innerText = this.innerText === 'Bill' ? 'Clicked!' : 'Bill'">Bill</button>
+
+    <!-- Example 54: Toggle image on click -->
+    <h2>Bill the button toggles image on click</h2>
+    <button class="button" onclick="this.style.backgroundImage = this.style.backgroundImage === '' ? 'url(https://via.placeholder.com/50)' : ''">Bill</button>
+
+    <!-- Example 55: Toggle video on click -->
+    <h2>Bill the button toggles video on click</h2>
+    <button class="button" onclick="this.style.backgroundImage = this.style.backgroundImage === '' ? 'url(https://via.placeholder.com/150)' : ''">Bill</button>
+
+    <!-- Example 56: Play audio on click -->
+    <h2>Bill the button plays audio on click</h2>
+    <button class="button" onclick="document.getElementById('audio').play()">Bill</button>
+    <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+    <!-- Example 57: Stop audio on click -->
+    <h2>Bill the button stops audio on click</h2>
+    <button class="button" onclick="document.getElementById('audio').pause()">Bill</button>
+
+    <!-- Example 58: Play video on click -->
+    <h2>Bill the button plays video on click</h2>
+    <button class="button" onclick="document.getElementById('video').play()">Bill</button>
+    <video id="video" width="320" height="240" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+
+    <!-- Example 59: Pause video on click -->
+    <h2>Bill the button pauses video on click</h2>
+    <button class="button" onclick="document.getElementById('video').pause()">Bill</button>
+
+    <!-- Example 60: Show modal on click -->
+    <h2>Bill the button shows a modal on click</h2>
+    <button class="button" onclick="document.getElementById('modal').style.display = 'block'">Bill</button>
+    <div id="modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: white; border: 1px solid black;">
+        <p>This is a modal!</p>
+        <button class="button" onclick="document.getElementById('modal').style.display = 'none'">Close</button>
+    </div>
+
+    <!-- Example 61: Hide modal on click -->
+    <h2>Bill the button hides a modal on click</h2>
+    <button class="button" onclick="document.getElementById('modal').style.display = 'none'">Bill</button>
+
+    <!-- Example 62: Toggle modal on click -->
+    <h2>Bill the button toggles a modal on click</h2>
+    <button class="button" onclick="document.getElementById('modal').style.display = document.getElementById('modal').style.display === 'none' ? 'block' : 'none'">Bill</button>
+
+    <!-- Example 63: Toggle dropdown on click -->
+    <h2>Bill the button toggles a dropdown on click</h2>
+    <button class="button" onclick="document.getElementById('dropdown').classList.toggle('show')">Bill</button>
+    <div id="dropdown" class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+    <style>
+        .dropdown-content {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+
+    <!-- Example 64: Change image source on click -->
+    <h2>Bill the button changes image source on click</h2>
+    <button class="button" onclick="document.getElementById('image').src = 'https://via.placeholder.com/150'">Bill</button>
+    <img id="image" src="https://via.placeholder.com/100" alt="Example Image">
+
+    <!-- Example 65: Change video source on click -->
+    <h2>Bill the button changes video source on click</h2>
+    <button class="button" onclick="document.getElementById('video').src = 'https://www.w3schools.com/html/mov_bbb.mp4'">Bill</button>
+
+    <!-- Example 66: Animate transform on click -->
+    <h2>Bill the button animates transform on click</h2>
+    <button class="button" onclick="this.style.transition = 'transform 0.5s'; this.style.transform = 'rotate(180deg)'">Bill</button>
+
+    <!-- Example 67: Animate multiple properties on click -->
+    <h2>Bill the button animates multiple properties on click</h2>
+    <button class="button" onclick="this.style.transition = 'all 0.5s'; this.style.transform = 'rotate(180deg)'; this.style.backgroundColor = 'green'">Bill</button>
+
+    <!-- Example 68: Change text color on focus -->
+    <h2>Bill the button changes text color on focus</h2>
+    <button class="button" onfocus="this.style.color = 'green'">Bill</button>
+
+    <!-- Example 69: Change background color on focus -->
+    <h2>Bill the button changes background color on focus</h2>
+    <button class="button" onfocus="this.style.backgroundColor = 'lightblue'">Bill</button>
+
+    <!-- Example 70: Change border color on focus -->
+    <h2>Bill the button changes border color on focus</h2>
+    <button class="button" onfocus="this.style.borderColor = 'green'">Bill</button>
+
+    <!-- Example 71: Change box shadow on focus -->
+    <h2>Bill the button changes box shadow on focus</h2>
+    <button class="button" onfocus="this.style.boxShadow = '5px 5px 10px grey'">Bill</button>
+
+    <!-- Example 72: Change opacity on focus -->
+    <h2>Bill the button changes opacity on focus</h2>
+    <button class="button" onfocus="this.style.opacity = '0.5'">Bill</button>
+
+    <!-- Example 73: Change font size on focus -->
+    <h2>Bill the button changes font size on focus</h2>
+    <button class="button" onfocus="this.style.fontSize = '24px'">Bill</button>
+
+    <!-- Example 74: Change text decoration on focus -->
+    <h2>Bill the button changes text decoration on focus</h2>
+    <button class="button" onfocus="this.style.textDecoration = 'underline'">Bill</button>
+
+    <!-- Example 75: Toggle class on focus -->
+    <h2>Bill the button toggles a class on focus</h2>
+    <button class="button" onfocus="this.classList.toggle('focus-class')">Bill</button>
+    <style>
+        .focus-class {
+            background-color: lightgreen;
+        }
+    </style>
+</body>
+</html>
